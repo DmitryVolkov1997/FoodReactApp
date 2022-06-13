@@ -10,6 +10,7 @@ const ListItem = styled.li`
 	overflow: hidden;
 	display: flex;
 	transition: box-shadow 0.22s ease-in-out;
+	margin-bottom: 2.5rem;
 
 	&:hover {
 		box-shadow: -2px 2px 7px 8px rgba(34, 60, 80, 0.2);
@@ -43,10 +44,7 @@ const CardTitle = styled.div`
 	margin: 1rem 0;
 	color: green;
 `
-const CardDescription = styled.div`
-	text-align: justify;
-	margin-bottom: 0.5rem;
-`
+
 const CardButton = styled.button`
 	padding: 1rem;
 	background: rgb(0, 160, 220);
@@ -67,32 +65,24 @@ const CardFooter = styled.div`
 	padding: 1.3rem;
 `
 
-const CategoriesItem = ({
-	idCategory,
-	strCategory,
-	strCategoryDescription,
-	strCategoryThumb,
-}) => {
+const MealItem = ({ idMeal, strMeal, strMealThumb }) => {
 	return (
 		<ListItem>
-			<LinkEl to={`/category/${strCategory}`}>
-				<Wrapper>
-					<ImgWrapper>
-						<Img src={strCategoryThumb} alt={strCategory} />
-					</ImgWrapper>
-					<CardInfo>
-						<CardTitle>{strCategory}</CardTitle>
-						<CardDescription>
-							{strCategoryDescription.slice(0, 180) + '...'}
-						</CardDescription>
-					</CardInfo>
-					<CardFooter>
-						<CardButton>Смотреть категорию</CardButton>
-					</CardFooter>
-				</Wrapper>
-			</LinkEl>
+			<Wrapper>
+				<ImgWrapper>
+					<Img src={strMealThumb} alt={strMeal} />
+				</ImgWrapper>
+				<CardInfo>
+					<CardTitle>{strMeal}</CardTitle>
+				</CardInfo>
+				<CardFooter>
+					<LinkEl to={`/meal/${idMeal}`}>
+						<CardButton>Смотреть рецепт</CardButton>
+					</LinkEl>
+				</CardFooter>
+			</Wrapper>
 		</ListItem>
 	)
 }
 
-export default CategoriesItem
+export default MealItem

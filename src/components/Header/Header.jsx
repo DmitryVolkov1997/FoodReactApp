@@ -42,10 +42,12 @@ const Header = () => {
 		<HeaderEl>
 			<Container>
 				<Wrapper>
-					<Logo>
-						<MdFastfood size='50' />
-						<p>Еда</p>
-					</Logo>
+					<NavLink to='/' style={{ color: 'inherit' }}>
+						<Logo>
+							<MdFastfood size='50' />
+							<p>Рецепты</p>
+						</Logo>
+					</NavLink>
 					<List>
 						<ListItem>
 							<NavLink to='/home'>Главная</NavLink>

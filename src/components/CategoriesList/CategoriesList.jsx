@@ -14,7 +14,6 @@ const CategoriesList = ({ catalog = [] }) => {
 	return (
 		<List>
 			{catalog.map(el => {
-				console.log(el)
 				return <CategoriesItem key={el.idCategory} {...el} />
 			})}
 		</List>

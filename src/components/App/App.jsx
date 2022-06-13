@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
 import About from '../../pages/About/About'
+import CategoriesPage from '../../pages/CategoriesPage/CategoriesPage'
 import Contact from '../../pages/Contact/Contact'
 import Home from '../../pages/Home/Home'
 import { Container } from '../Container/Container'
@@ -15,6 +16,7 @@ function App() {
 					<Route path='/' element={<Home />} />
 					<Route path='/about' element={<About />} />
 					<Route path='/contact' element={<Contact />} />
+					<Route path='/category/:name' element={<CategoriesPage />} />
 				</Routes>
 			</Container>
 		</>

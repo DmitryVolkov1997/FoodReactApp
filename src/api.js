@@ -16,7 +16,7 @@ const getAllMealCategories = async () => {
 }
 
 const filteredByCategory = async category => {
-	const data = await axios.get(`${API_URL}filter.php?c=${category}`)
+	return await axios.get(`${API_URL}filter.php?c=${category}`)
 }
 
 export { getMealById, getAllMealCategories, filteredByCategory }
